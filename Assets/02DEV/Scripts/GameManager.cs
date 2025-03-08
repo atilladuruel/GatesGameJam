@@ -5,6 +5,8 @@ public class GameManager : MonoBehaviour
 {
     
     [SerializeField] DayTypeSO dayRoutine;
+    [SerializeField] BlockListSO BlockListSO;
+
     LevelManager levelManager;
     
     private void Start()
@@ -17,5 +19,6 @@ public class GameManager : MonoBehaviour
     {
         //LevelManager.GetDataEvent.Invoke(dayRoutine.DayRoutines[0].patentOwnerSO);
         levelManager.LoadDayDataTtest(dayRoutine.DayRoutines[0].patentOwnerSO);
+        levelManager.LoadBlockList(BlockListSO.blockedLists[0]);
     }
 }
