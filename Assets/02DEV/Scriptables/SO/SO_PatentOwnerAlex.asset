@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9545f33a317c4ef693ffa4832b13902, type: 3}
+  m_Name: SO_PatentOwnerAlex
+  m_EditorClassIdentifier: 
+  ownerName: Alex Master
+  ownerSprite: {fileID: 2648797974980727721, guid: 75ea45aa3483c4977be61c789aa4d446, type: 3}
+  patents:
+  - patentName: 34sdfdf
+    patentDescription: sdgydurma bilsdgs qwer1
+    patentSprite: {fileID: 2648797974980727721, guid: 75ea45aa3483c4977be61c789aa4d446, type: 3}
+    isTruePatent: 1
+  - patentName: 2. element
+    patentDescription: "Oyuncu, fon almak i\xE7in uydurma bilim projeleri haz\u0131rlayan
+      bir laboratuvar y\xF6neticisi. Ne kadar sa\xE7ma deney uydurabilirsen, o kadar
+      para kazan\u0131rs\u0131n."
+    patentSprite: {fileID: 2648797974980727721, guid: 75ea45aa3483c4977be61c789aa4d446, type: 3}
+    isTruePatent: 0
+  - patentName: Pubgi Patent
+    patentDescription: "Oyuncu, fon almak i\xE7in uydurma bilim projeleri haz\u0131rlayan
+      bir laboratuvar y\xF6neticisi. Ne kadar sa\xE7ma deney uydurabilirsen, o kadar
+      para kazan\u0131rs\u0131n."
+    patentSprite: {fileID: 2648797974980727721, guid: 75ea45aa3483c4977be61c789aa4d446, type: 3}
+    isTruePatent: 1
+  - patentName: 4. element
+    patentDescription: "Oyuncu, fon almak i\xE7in uydurma bilim projeleri haz\u0131rlayan
+      bir laboratuvar y\xF6neticisi. Ne kadar sa\xE7ma deney uydurabilirsen, o kadar
+      para kazan\u0131rs\u0131n."
+    patentSprite: {fileID: 2648797974980727721, guid: 75ea45aa3483c4977be61c789aa4d446, type: 3}
+    isTruePatent: 1

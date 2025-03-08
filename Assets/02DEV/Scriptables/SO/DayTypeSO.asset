@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66963589b588b4c5e96989a76dc9eb04, type: 3}
+  m_Name: DayTypeSO
+  m_EditorClassIdentifier: 
+  DayRoutines:
+  - DayName: 1
+    patentOwnerSO:
+    - {fileID: 11400000, guid: 83ebddb2182e94d969721498ceeb9269, type: 2}
+    - {fileID: 11400000, guid: ff18d3572f31642baba4aecc1f896817, type: 2}
+    - {fileID: 11400000, guid: 42191f38879574cbe9364831d913cf2f, type: 2}
+    - {fileID: 11400000, guid: 0fa20aeb6fe0448c4a63305d708e9893, type: 2}
+    - {fileID: 11400000, guid: 1dce13070f57643f7afa8f0b6d2d9ea8, type: 2}
+    - {fileID: 11400000, guid: 4dc8d759f9a9042e8842abfbe846d3f0, type: 2}
+    - {fileID: 11400000, guid: 34bc267a0fe53449887a9ecac025b5bf, type: 2}
+    - {fileID: 11400000, guid: 2e410f43f2f024f4196ff8ec96c2cb7c, type: 2}
+    - {fileID: 11400000, guid: 7942484f342554d2384760cd2062988c, type: 2}
+    - {fileID: 11400000, guid: c339f66c193ad43ee997de88c6a778b8, type: 2}
+  - DayName: 2
+    patentOwnerSO:
+    - {fileID: 11400000, guid: 83ebddb2182e94d969721498ceeb9269, type: 2}
+    - {fileID: 11400000, guid: ff18d3572f31642baba4aecc1f896817, type: 2}
+    - {fileID: 11400000, guid: 42191f38879574cbe9364831d913cf2f, type: 2}
+    - {fileID: 11400000, guid: 0fa20aeb6fe0448c4a63305d708e9893, type: 2}
+    - {fileID: 11400000, guid: 1dce13070f57643f7afa8f0b6d2d9ea8, type: 2}
+    - {fileID: 11400000, guid: 4dc8d759f9a9042e8842abfbe846d3f0, type: 2}
+    - {fileID: 11400000, guid: 34bc267a0fe53449887a9ecac025b5bf, type: 2}
+    - {fileID: 11400000, guid: 2e410f43f2f024f4196ff8ec96c2cb7c, type: 2}
+    - {fileID: 11400000, guid: 7942484f342554d2384760cd2062988c, type: 2}
+    - {fileID: 11400000, guid: c339f66c193ad43ee997de88c6a778b8, type: 2}
+  - DayName: 
+    patentOwnerSO: []
+  - DayName: 
+    patentOwnerSO: []
