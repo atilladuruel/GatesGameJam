@@ -24,14 +24,14 @@ MonoBehaviour:
     - qwer2
     - qwer3
     - qwer4
-  - dayIndex: 0
+  - dayIndex: 1
     blockedNameWord:
-    - test1
-    - test2
-    - test3
-    - test4
+    - electric
+    - metal
+    - exp
+    - wheel
     blockedDescriptionWord:
-    - qwer1
-    - qwer2
-    - qwer3
-    - qwer4
+    - screw
+    - dutch
+    - larin
+    - ezekiel

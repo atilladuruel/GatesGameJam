@@ -8,31 +8,15 @@ public class LevelManager : MonoBehaviour
     [SerializeField]private UIItems UIElements;
 
     [SerializeField] private List<string> blockedWords;
- //   public static Action<List<PatentOwnerSO>> GetDataEvent;
 
-  //  private void OnEnable()
-  //  {
-  //      GetDataEvent += LoadDayData;
- //   }
+    GameManager gameManager;
 
- //   private void OnDisable()
-  //  {
-   //     GetDataEvent -= LoadDayData;
-  //  }
+     
 
-
-    private void LoadDayData(List<PatentOwnerSO> newDayData)
+    private void Start()
     {
-        patentOwners.Clear();
-        foreach (var item in newDayData)
-        {
-            patentOwners.Add(item);
-        }
-        
-        GetOwnerPatent();
+        gameManager = GetComponent<GameManager>();
     }
-
-
 
     public void LoadDayDataTtest(List<PatentOwnerSO> newDayData)
     {
@@ -76,6 +60,12 @@ public class LevelManager : MonoBehaviour
     [ContextMenu("Test")]
     public void NextPatentOwner()
     {
+        if (patentOwners.Count==0)
+        {
+            gameManager.NextDay();
+            return;
+        }
+
         patentOwners.RemoveAt(0);
         GetOwnerPatent();
     }

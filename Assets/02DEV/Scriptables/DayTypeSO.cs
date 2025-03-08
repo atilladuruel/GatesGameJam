@@ -11,6 +11,7 @@ public class DayTypeSO : ScriptableObject
     [System.Serializable]
     public struct DaysRoutine
     {
+        public string DayName;
         public List<PatentOwnerSO> patentOwnerSO;
     }
 }
