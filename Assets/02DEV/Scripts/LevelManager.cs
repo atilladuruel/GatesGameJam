@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    [SerializeField]private List<PatentOwnerSO> patentOwners;
-    [SerializeField]private UIItems UIElements;
+    [SerializeField] private List<PatentOwnerSO> patentOwners;
+    [SerializeField] private UIItems UIElements;
 
     [SerializeField] private List<string> blockedWords;
 
     GameManager gameManager;
 
     [SerializeField] GameObject nexCustomerButton;
-     
+
 
     private void Start()
     {
         gameManager = GetComponent<GameManager>();
     }
 
-    public void LoadDayDataTtest(List<PatentOwnerSO> newDayData , string dayIndex)
+    public void LoadDayDataTtest(List<PatentOwnerSO> newDayData, string dayIndex)
     {
         UIElements.dayCounter.text = "Days : " + dayIndex.ToString();
         patentOwners.Clear();
@@ -48,7 +48,7 @@ public class LevelManager : MonoBehaviour
 
     void GetOwnerPatent()
     {
-       // AudioManager.Instance.PlaySFX("Paper");
+        // AudioManager.Instance.PlaySFX("Paper");
         var patentOwner = patentOwners[0];
         var patent = patentOwner.patents[0];
 
@@ -72,7 +72,7 @@ public class LevelManager : MonoBehaviour
     }
     public void NextPatentOwner()
     {
-        if (patentOwners.Count==0)
+        if (patentOwners.Count == 0)
         {
             gameManager.NextDay();
             return;
@@ -87,13 +87,14 @@ public class LevelManager : MonoBehaviour
     {
         var patent = patentOwners[0].patents[0];
         ClearData();
-        if (patent.isTruePatent != isTrue) {
+        if (patent.isTruePatent != isTrue)
+        {
 
             Debug.Log("failllsss");
             OpenCustomerButton();
             return;
-        }     
-     
+        }
+
         foreach (var item in blockedWords)
         {
             if (patent.patentName.Contains(item) || patent.patentDescription.Contains(item))
@@ -114,14 +115,15 @@ public class LevelManager : MonoBehaviour
         OpenCustomerButton();
     }
 
-  private void OpenCustomerButton() {
+    private void OpenCustomerButton()
+    {
         nexCustomerButton.SetActive(true);
     }
 
     bool isFirstTime = false;
     public void NextPatent()
     {
-        
+
         nexCustomerButton.SetActive(false);
 
         if (!isFirstTime)

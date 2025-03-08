@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    
+
     [SerializeField] DayTypeSO dayRoutine;
     [SerializeField] BlockListSO BlockListSO;
 
     LevelManager levelManager;
-    
+
     private void Start()
     {
         levelManager = GetComponent<LevelManager>();

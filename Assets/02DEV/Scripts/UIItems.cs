@@ -7,7 +7,7 @@ public struct UIItems
 {
     public TextMeshProUGUI ownerName;
     public Image ownerImage;
-    
+
     public TextMeshProUGUI patentName;
     public TextMeshProUGUI patentDescription;
     public Image patentImage;
