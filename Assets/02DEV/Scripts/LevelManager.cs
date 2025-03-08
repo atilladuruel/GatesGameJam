@@ -12,7 +12,7 @@ public class LevelManager : MonoBehaviour
     GameManager gameManager;
 
     [SerializeField] GameObject nexCustomerButton;
-
+    [SerializeField] GameObject gameEndMenu;
 
     private void Start()
     {
@@ -28,6 +28,8 @@ public class LevelManager : MonoBehaviour
             patentOwners.Add(item);
         }
         isFirstTime = false;
+        wrongCount = 0;
+        trueCount = 0;
         OpenCustomerButton();
     }
 
@@ -72,24 +74,28 @@ public class LevelManager : MonoBehaviour
     }
     public void NextPatentOwner()
     {
+        patentOwners.RemoveAt(0);
         if (patentOwners.Count == 0)
         {
-            gameManager.NextDay();
+            CalculateGameEnd();
+            //gameManager.NextDay();
             return;
         }
 
-        patentOwners.RemoveAt(0);
+       
         GetOwnerPatent();
     }
 
     bool isWordControl = false;
+
+    int wrongCount,trueCount;
     public void ControlPatent(bool isTrue)
     {
         var patent = patentOwners[0].patents[0];
         ClearData();
         if (patent.isTruePatent != isTrue)
         {
-
+            wrongCount++;
             Debug.Log("failllsss");
             OpenCustomerButton();
             return;
@@ -99,7 +105,7 @@ public class LevelManager : MonoBehaviour
         {
             if (patent.patentName.Contains(item) || patent.patentDescription.Contains(item))
             {
-
+                wrongCount++;
                 Debug.Log("failllsss " + item + " Found");
                 isWordControl = true;
                 break;
@@ -110,7 +116,7 @@ public class LevelManager : MonoBehaviour
         {
             Debug.Log("Congratz");
         }
-
+        trueCount++;
         isWordControl = false;
         OpenCustomerButton();
     }
@@ -134,6 +140,13 @@ public class LevelManager : MonoBehaviour
             return;
         }
         NextPatentOwner();
+    }
+
+    void CalculateGameEnd()
+    {
+        PlayerPrefs.SetInt("WrongCount", wrongCount);
+        PlayerPrefs.SetInt("TrueCount",trueCount);
+        gameEndMenu.SetActive(true);
     }
 
 }
