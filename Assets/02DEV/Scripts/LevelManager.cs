@@ -62,12 +62,15 @@ public class LevelManager : MonoBehaviour
 
     void GetOwnerPatent()
     {
-        UIElements.ownerImage.sprite = patentOwners[0].ownerSprite;
-        UIElements.ownerName .text= patentOwners[0].ownerName;
+        var patentOwner = patentOwners[0];
+        var patent = patentOwner.patents[0];
 
-        UIElements.patentImage.sprite = patentOwners[0].patents[0].patentSprite;
-        UIElements.patentName.text = patentOwners[0].patents[0].patentName;
-        UIElements.patentDescription.text = patentOwners[0].patents[0].patentDescription;
+        UIElements.ownerImage.sprite = patentOwner.ownerSprite;
+        UIElements.ownerName.text = patentOwner.ownerName;
+
+        UIElements.patentImage.sprite = patent.patentSprite;
+        UIElements.patentName.text = patent.patentName;
+        UIElements.patentDescription.text = patent.patentDescription;
     }
 
     [ContextMenu("Test")]
@@ -80,27 +83,30 @@ public class LevelManager : MonoBehaviour
     bool isWordControl = false;
     public void ControlPatent(bool isTrue)
     {
+        var patent = patentOwners[0].patents[0];
 
+        if (patent.isTruePatent != isTrue) {
 
-        if (patentOwners[0].patents[0].isTruePatent == isTrue) {
-
-            foreach (var item in blockedWords)
+            Debug.Log("failllsss");
+            NextPatentOwner();
+            return;
+        }     
+     
+        foreach (var item in blockedWords)
+        {
+            if (patent.patentName.Contains(item) || patent.patentDescription.Contains(item))
             {
-                if (patentOwners[0].patents[0].patentName.Contains(item) || patentOwners[0].patents[0].patentDescription.Contains(item))
-                {
 
-                    Debug.Log("failllsss " +  item + " Found");
-                    isWordControl = true;
-                    break;
-                }
+                Debug.Log("failllsss " + item + " Found");
+                isWordControl = true;
+                break;
             }
+        }
 
-            if (!isWordControl)
-            {
-                 Debug.Log("Congratz");
-            }
-        }      
-        else Debug.Log("failllsss");
+        if (!isWordControl)
+        {
+            Debug.Log("Congratz");
+        }
 
         isWordControl = false;
         NextPatentOwner();

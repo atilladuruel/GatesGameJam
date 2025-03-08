@@ -12,4 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0761b0588768b4cd595e2a443029c944, type: 3}
   m_Name: BlackListSO
   m_EditorClassIdentifier: 
-  blockedLists: []
+  blockedLists:
+  - dayIndex: 0
+    blockedNameWord:
+    - test1
+    - test2
+    - test3
+    - test4
+    blockedDescriptionWord:
+    - qwer1
+    - qwer2
+    - qwer3
+    - qwer4
+  - dayIndex: 0
+    blockedNameWord:
+    - test1
+    - test2
+    - test3
+    - test4
+    blockedDescriptionWord:
+    - qwer1
+    - qwer2
+    - qwer3
+    - qwer4

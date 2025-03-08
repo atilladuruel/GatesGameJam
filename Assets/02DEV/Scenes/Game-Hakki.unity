@@ -156,6 +156,7 @@ MonoBehaviour:
     patentName: {fileID: 1983429952}
     patentDescription: {fileID: 2098183880}
     patentImage: {fileID: 1184097783}
+  blockedWords: []
 --- !u!4 &87912040
 Transform:
   m_ObjectHideFlags: 0
@@ -184,6 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dayRoutine: {fileID: 11400000, guid: b193f38cfad844812abf3d9240de1caf, type: 2}
+  BlockListSO: {fileID: 11400000, guid: 97375707752de4e069954a74c3948834, type: 2}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
