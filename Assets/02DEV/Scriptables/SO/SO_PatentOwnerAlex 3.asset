@@ -18,20 +18,20 @@ MonoBehaviour:
   - patentName: AAA BBB
     patentDescription: "ydurma bilim projeleri haz\u0131rlayan bir laboratuvar y\xF6neticisi.
       Ne kadar sa\xE7ma deney uydurabilirsen, o kadar para kazan\u0131rs\u0131n."
-    patentSprite: {fileID: 5520589005953901908, guid: 75ea45aa3483c4977be61c789aa4d446, type: 3}
+    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 1
   - patentName: 2. element test1
     patentDescription: "ydurma bilim projeleri haz\u0131rlayan bir laboratuvar y\xF6neticisi.
       Ne kadar sa\xE7ma deney uydurabilirsen, o kadar para kazan\u0131rs\u0131n."
-    patentSprite: {fileID: 5520589005953901908, guid: 75ea45aa3483c4977be61c789aa4d446, type: 3}
+    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 1
   - patentName: AAA BBB
     patentDescription: "ydurma bilim qwer1 projeleri haz\u0131rlayan bir laboratuvar
       y\xF6neticisi. Ne kadar sa\xE7ma deney uydurabilirsen, o kadar para kazan\u0131rs\u0131n."
-    patentSprite: {fileID: 5520589005953901908, guid: 75ea45aa3483c4977be61c789aa4d446, type: 3}
+    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 1
   - patentName: 4. element
     patentDescription: "ydurma bilim projeleri haz\u0131rlayan bir laboratuvar y\xF6neticisi.
       Ne kadar sa\xE7ma deney uydurabilirsen, o kadar para kazan\u0131rs\u0131n."
-    patentSprite: {fileID: 5520589005953901908, guid: 75ea45aa3483c4977be61c789aa4d446, type: 3}
+    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 1
