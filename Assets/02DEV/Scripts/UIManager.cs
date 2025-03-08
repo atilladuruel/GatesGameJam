@@ -1,5 +1,7 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
+using DG.Tweening;
 
 public class UIManager : MonoBehaviour
 {
@@ -38,7 +40,7 @@ public class UIManager : MonoBehaviour
         UIObject.SetActive(on);
     }
 
-    public void ActivateDeactivateUI(GameObject UIObject, Animator animator,string parameterName, float waitSec, bool on)
+    public void ActivateDeactivateUI(GameObject UIObject, Animator animator, string parameterName, float waitSec, bool on)
     {
         animator.SetTrigger(parameterName);
         StartCoroutine(WaitCoroutine(waitSec));
@@ -48,6 +50,27 @@ public class UIManager : MonoBehaviour
     public IEnumerator WaitCoroutine(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
+    }
+
+    public void PlayBounce(Image targetImage, float duration = 0.5f, float scaleFactor = 1.2f)
+    {
+        if (targetImage == null)
+        {
+            Debug.LogWarning("Target Image is not assigned!");
+            return;
+        }
+
+        // Ýlk olarak büyüt, sonra orijinal boyutuna getir
+        targetImage.transform.DOScale(scaleFactor, duration / 2)
+            .SetEase(Ease.OutQuad)
+            .OnComplete(() =>
+            {
+                targetImage.transform.DOScale(1f, duration / 2).SetEase(Ease.InQuad);
+            });
+    }
+    public void PlayBounce(Image targetImage)
+    {
+        PlayBounce(targetImage, 0.2f, 1.1f);
     }
 
 }
