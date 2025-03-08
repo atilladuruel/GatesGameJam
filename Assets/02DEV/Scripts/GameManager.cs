@@ -17,8 +17,15 @@ public class GameManager : MonoBehaviour
 
     private void LoadCurrentDay()
     {
-        //LevelManager.GetDataEvent.Invoke(dayRoutine.DayRoutines[0].patentOwnerSO);
+        //LevelManager.GetDataEvent()
         levelManager.LoadDayDataTtest(dayRoutine.DayRoutines[0].patentOwnerSO);
         levelManager.LoadBlockList(BlockListSO.blockedLists[0]);
+    }
+
+    public void NextDay()
+    {
+        dayRoutine.DayRoutines.RemoveAt(0);
+        BlockListSO.blockedLists.RemoveAt(0);
+        LoadCurrentDay();
     }
 }
