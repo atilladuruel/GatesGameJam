@@ -11,6 +11,7 @@ public class LevelManager : MonoBehaviour
 
     GameManager gameManager;
 
+    [SerializeField] GameObject nexCustomerButton;
      
 
     private void Start()
@@ -18,15 +19,16 @@ public class LevelManager : MonoBehaviour
         gameManager = GetComponent<GameManager>();
     }
 
-    public void LoadDayDataTtest(List<PatentOwnerSO> newDayData)
+    public void LoadDayDataTtest(List<PatentOwnerSO> newDayData , string dayIndex)
     {
+        UIElements.dayCounter.text = "Days : " + dayIndex.ToString();
         patentOwners.Clear();
         foreach (var item in newDayData)
         {
             patentOwners.Add(item);
         }
-        
-        GetOwnerPatent();
+        isFirstTime = false;
+        OpenCustomerButton();
     }
 
     public void LoadBlockList(BlockListSO.BlockedList blockedList)
@@ -46,6 +48,7 @@ public class LevelManager : MonoBehaviour
 
     void GetOwnerPatent()
     {
+       // AudioManager.Instance.PlaySFX("Paper");
         var patentOwner = patentOwners[0];
         var patent = patentOwner.patents[0];
 
@@ -57,7 +60,16 @@ public class LevelManager : MonoBehaviour
         UIElements.patentDescription.text = patent.patentDescription;
     }
 
-    [ContextMenu("Test")]
+    void ClearData()
+    {
+
+        UIElements.ownerImage.sprite = null;
+        UIElements.ownerName.text = "";
+
+        UIElements.patentImage.sprite = null;
+        UIElements.patentName.text = "";
+        UIElements.patentDescription.text = "";
+    }
     public void NextPatentOwner()
     {
         if (patentOwners.Count==0)
@@ -74,11 +86,11 @@ public class LevelManager : MonoBehaviour
     public void ControlPatent(bool isTrue)
     {
         var patent = patentOwners[0].patents[0];
-
+        ClearData();
         if (patent.isTruePatent != isTrue) {
 
             Debug.Log("failllsss");
-            NextPatentOwner();
+            OpenCustomerButton();
             return;
         }     
      
@@ -99,6 +111,27 @@ public class LevelManager : MonoBehaviour
         }
 
         isWordControl = false;
+        OpenCustomerButton();
+    }
+
+  private void OpenCustomerButton() {
+        nexCustomerButton.SetActive(true);
+    }
+
+    bool isFirstTime = false;
+    public void NextPatent()
+    {
+        
+        nexCustomerButton.SetActive(false);
+
+        if (!isFirstTime)
+        {
+            GetOwnerPatent();
+            isFirstTime = true;
+
+            return;
+        }
         NextPatentOwner();
     }
+
 }

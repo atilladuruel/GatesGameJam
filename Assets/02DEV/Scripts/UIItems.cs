@@ -12,4 +12,6 @@ public struct UIItems
     public TextMeshProUGUI patentDescription;
     public Image patentImage;
 
+    public TextMeshProUGUI dayCounter;
+
 }
