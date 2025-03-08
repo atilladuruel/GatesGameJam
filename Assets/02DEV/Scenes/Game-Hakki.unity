@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 87912040}
   - component: {fileID: 87912039}
   - component: {fileID: 87912041}
+  - component: {fileID: 87912042}
   m_Layer: 0
   m_Name: Manager
   m_TagString: Untagged
@@ -188,6 +189,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dayRoutine: {fileID: 11400000, guid: b193f38cfad844812abf3d9240de1caf, type: 2}
   BlockListSO: {fileID: 11400000, guid: 97375707752de4e069954a74c3948834, type: 2}
+--- !u!114 &87912042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 87912038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 80f027b8c06b27447bd13a7220602e7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundMusicList:
+  - {fileID: 8300000, guid: 10af9546d92337b448d7349a58e0cae0, type: 3}
+  soundEffects:
+  - sfxType: 0
+    clip: {fileID: 8300000, guid: 28e5ba13f2be7fb44b9e0022283552ee, type: 3}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -2266,7 +2284,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2113471379}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 87912039}
+        m_TargetAssemblyTypeName: LevelManager, Assembly-CSharp
+        m_MethodName: NextPatent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2113471379
 MonoBehaviour:
   m_ObjectHideFlags: 0
