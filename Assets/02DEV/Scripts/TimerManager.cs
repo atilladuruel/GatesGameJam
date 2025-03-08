@@ -44,7 +44,7 @@ public class TimerManager : MonoBehaviour
     {
         int hours = Mathf.FloorToInt(currentGameTime / 60f);
         int minutes = Mathf.FloorToInt(currentGameTime % 60f);
-        timerText.text = $"{hours:00}:{minutes:00}";
+        timerText.text = $"Time: {hours:00}:{minutes:00}";
     }
 
     IEnumerator StartWarningEffect()

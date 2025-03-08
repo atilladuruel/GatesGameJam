@@ -40,11 +40,17 @@ public class UIManager : MonoBehaviour
         UIObject.SetActive(on);
     }
 
-    public void ActivateDeactivateUI(GameObject UIObject, Animator animator, string parameterName, float waitSec, bool on)
+    public void AfterActivateDeactivateUI(GameObject UIObject, Animator animator, string parameterName, float waitSec, bool on)
     {
         animator.SetTrigger(parameterName);
         StartCoroutine(WaitCoroutine(waitSec));
         UIObject.SetActive(on);
+    }
+    public void BeforeActivateDeactivateUI(GameObject UIObject, Animator animator, string parameterName, float waitSec, bool on)
+    {
+        UIObject.SetActive(on);
+        StartCoroutine(WaitCoroutine(waitSec));
+        animator.SetTrigger(parameterName);
     }
 
     public IEnumerator WaitCoroutine(float waitTime)

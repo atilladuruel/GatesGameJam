@@ -161,6 +161,7 @@ MonoBehaviour:
     dayCounter: {fileID: 1007430007}
   blockedWords: []
   nexCustomerButton: {fileID: 2113471377}
+  gameEndMenu: {fileID: 0}
 --- !u!4 &87912040
 Transform:
   m_ObjectHideFlags: 0

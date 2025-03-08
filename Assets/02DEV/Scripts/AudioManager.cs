@@ -106,7 +106,8 @@ public enum SFX
 {
     Paper,
     Footstep,
-    ButtonClick
+    ButtonClick,
+    Stamp
 }
 
 // 🎶 Ses efektleri için özel yapı
