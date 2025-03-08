@@ -13,9 +13,9 @@ public class AudioManager : MonoBehaviour
     public List<AudioClip> backgroundMusicList = new List<AudioClip>();
 
     [Header("Sound Effects List")]
-    public List<SoundEffect> soundEffects = new List<SoundEffect>();
+    public List<SFXClip> soundEffects = new List<SFXClip>();
 
-    private Dictionary<string, AudioClip> sfxDictionary = new Dictionary<string, AudioClip>();
+    private Dictionary<SFX, AudioClip> sfxDictionary = new Dictionary<SFX, AudioClip>();
 
     private void Awake()
     {
@@ -31,12 +31,12 @@ public class AudioManager : MonoBehaviour
             musicSource.loop = true;
             musicSource.playOnAwake = false;
 
-            // SFX Dictionary'sini oluştur
+            // Enum ile Dictionary eşleme
             foreach (var sfx in soundEffects)
             {
-                if (!sfxDictionary.ContainsKey(sfx.name))
+                if (!sfxDictionary.ContainsKey(sfx.sfxType))
                 {
-                    sfxDictionary.Add(sfx.name, sfx.clip);
+                    sfxDictionary.Add(sfx.sfxType, sfx.clip);
                 }
             }
 
@@ -68,16 +68,16 @@ public class AudioManager : MonoBehaviour
         musicSource.Play();
     }
 
-    // 🎧 İsme göre ses efekti çal
-    public void PlaySFX(string sfxName, float volume = 1f)
+    // 🎧 Enum ile ses efekti çal
+    public void PlaySFX(SFX sfxType, float volume = 1f)
     {
-        if (sfxDictionary.TryGetValue(sfxName, out AudioClip clip))
+        if (sfxDictionary.TryGetValue(sfxType, out AudioClip clip))
         {
             sfxSource.PlayOneShot(clip, volume);
         }
         else
         {
-            Debug.LogWarning($"SFX '{sfxName}' bulunamadı!");
+            Debug.LogWarning($"SFX '{sfxType}' bulunamadı!");
         }
     }
 
@@ -100,10 +100,19 @@ public class AudioManager : MonoBehaviour
     }
 }
 
-// 🎵 Ses efektleri için özel sınıf
+// 🎵 Enum ile ses efektleri
 [System.Serializable]
-public class SoundEffect
+public enum SFX
 {
-    public string name;
+    Paper,
+    Footstep,
+    ButtonClick
+}
+
+// 🎶 Ses efektleri için özel yapı
+[System.Serializable]
+public class SFXClip
+{
+    public SFX sfxType;
     public AudioClip clip;
 }
