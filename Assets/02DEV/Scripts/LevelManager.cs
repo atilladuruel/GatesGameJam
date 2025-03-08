@@ -48,7 +48,7 @@ public class LevelManager : MonoBehaviour
 
     void GetOwnerPatent()
     {
-        // AudioManager.Instance.PlaySFX("Paper");
+        AudioManager.Instance.PlaySFX(SFX.Paper);
         var patentOwner = patentOwners[0];
         var patent = patentOwner.patents[0];
 
