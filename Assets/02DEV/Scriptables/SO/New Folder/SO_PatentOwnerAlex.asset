@@ -15,7 +15,8 @@ MonoBehaviour:
   ownerName: Alex Master
   ownerSprite: {fileID: 21300000, guid: 55ec7e076f43dd543b2ad7b17958702c, type: 3}
   patents:
-  - patentName: Self-Cleaning Cloak
-    patentDescription: A magical cloak that repels dirt and never needs washing.
+  - patentName: Hoshhaf(Compote)
+    patentDescription: A project that aims to extend the shelf life of compote without
+      pasteurization and aims to bring innovations in logistics.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 1

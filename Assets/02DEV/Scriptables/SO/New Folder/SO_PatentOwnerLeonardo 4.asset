@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SO_PatentOwnerLeonardo 4
   m_EditorClassIdentifier: 
   ownerName: Leonardo Da Vinci
-  ownerSprite: {fileID: 8517273046572867635, guid: 75ea45aa3483c4977be61c789aa4d446, type: 3}
+  ownerSprite: {fileID: -6458281212541774107, guid: 7f13f8a61d9984140a7a24575c6854bb, type: 3}
   patents:
   - patentName: Mechanical Lion Automaton
     patentDescription: A robotic lion that can walk and open its chest to reveal

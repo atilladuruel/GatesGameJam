@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SO_PatentOwnerRhiannon
   m_EditorClassIdentifier: 
   ownerName: Rhiannon Silverlight
-  ownerSprite: {fileID: 8517273046572867635, guid: 75ea45aa3483c4977be61c789aa4d446, type: 3}
+  ownerSprite: {fileID: -1472498995922668587, guid: a921c05e57b5c4a2b95e388508aa2cc0, type: 3}
   patents:
   - patentName: Sleeping Stick
     patentDescription: Stick that provide sleep to a person when you hit it to his
