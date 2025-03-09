@@ -12,25 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9545f33a317c4ef693ffa4832b13902, type: 3}
   m_Name: SO_PatentOwnerAlex 2
   m_EditorClassIdentifier: 
-  ownerName: Fenrir Frostbane
-  ownerSprite: {fileID: -1472498995922668587, guid: a921c05e57b5c4a2b95e388508aa2cc0, type: 3}
+  ownerName: Alex Master
+  ownerSprite: {fileID: 21300000, guid: 55ec7e076f43dd543b2ad7b17958702c, type: 3}
   patents:
-  - patentName: Invisible Ink Lock
-    patentDescription: A book that can only be opened when the correct invisible
-      ink signature is applied.
+  - patentName: Talking Fireplace
+    patentDescription: A fireplace that tells stories while keeping you warm.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 1
-  - patentName: Enchanted Boots
-    patentDescription: "Boots that automatically adjust to the wearer\u2019s size
-      and comfort."
-    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
-    isTruePatent: 1
-  - patentName: Flying Machine
-    patentDescription: A contraption with wings that allows humans to fly using aerodynamic
-      principles.
-    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
-    isTruePatent: 0
-  - patentName: Perpetual Motion Device
-    patentDescription: A machine that moves indefinitely without an energy source.
-    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
-    isTruePatent: 0

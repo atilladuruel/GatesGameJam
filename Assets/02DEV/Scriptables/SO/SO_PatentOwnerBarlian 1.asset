@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9545f33a317c4ef693ffa4832b13902, type: 3}
+  m_Name: SO_PatentOwnerBarlian 1
+  m_EditorClassIdentifier: 
+  ownerName: Balian Stormrider
+  ownerSprite: {fileID: 21300000, guid: f6c58219208f9423eae6d6eab1025589, type: 3}
+  patents:
+  - patentName: Silent Alarm Bell
+    patentDescription: A bell that rings only in the mind of the intended listener.
+    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
+    isTruePatent: 1

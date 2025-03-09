@@ -10,26 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9545f33a317c4ef693ffa4832b13902, type: 3}
-  m_Name: SO_PatentOwnerAlex 8
+  m_Name: SO_PatentOwnerRhiannon 2
   m_EditorClassIdentifier: 
-  ownerName: Sigurd Firebrand
+  ownerName: Rhiannon Silverlight
   ownerSprite: {fileID: 8517273046572867635, guid: 75ea45aa3483c4977be61c789aa4d446, type: 3}
   patents:
-  - patentName: Golden Egg Feed
-    patentDescription: A special feed that is claimed to make chickens lay golden
-      eggs when given to them.
+  - patentName: Sleeping Stick
+    patentDescription: Stick that provide sleep to a person when you hit it to his
+      head.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 1
-  - patentName: Enchanted Stone Sandal
-    patentDescription: A sandal said to allow the wearer to walk without ever stepping
-      on the ground.
+  - patentName: Teleporting Chest
+    patentDescription: A chest that can be summoned to the owner's location.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 1
-  - patentName: Shadow Catcher Cage
-    patentDescription: A special cage that can catch and imprison shadows.
+  - patentName: Exorcist Bell
+    patentDescription: A special bell that drives away evil spirits. The larger the
+      bell, the more demons escape.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 1
-  - patentName: Telescope
-    patentDescription: A pipe made of special glass to see the sky much more clearly.
+  - patentName: Invisibility Potion
+    patentDescription: A potion that is claimed to make the body invisible to avoid
+      paying the poll tax.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
-    isTruePatent: 0
+    isTruePatent: 1

@@ -12,22 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9545f33a317c4ef693ffa4832b13902, type: 3}
   m_Name: SO_PatentOwnerAlex 3
   m_EditorClassIdentifier: 
-  ownerName: Riven Stonebrook
-  ownerSprite: {fileID: 8517273046572867635, guid: 75ea45aa3483c4977be61c789aa4d446, type: 3}
+  ownerName: Alex Master
+  ownerSprite: {fileID: 21300000, guid: 55ec7e076f43dd543b2ad7b17958702c, type: 3}
   patents:
-  - patentName: Mechanical Servant
-    patentDescription: A wind-up mechanical servant that helps with household chores.
-    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
-    isTruePatent: 1
-  - patentName: Inkless Writing Scroll
-    patentDescription: A scroll that records thoughts directly without needing ink.
-    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
-    isTruePatent: 1
-  - patentName: Feather of Memory
-    patentDescription: A feather that, when touched, recalls lost memories.
-    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
-    isTruePatent: 1
-  - patentName: Endless Spice Jar
-    patentDescription: A jar that always contains the right spice needed for a dish.
+  - patentName: Automatic Potion Stirrer
+    patentDescription: A self-stirring stick that prevents potions from burning.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 1

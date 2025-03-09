@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9545f33a317c4ef693ffa4832b13902, type: 3}
-  m_Name: SO_PatentOwnerAlex 6
+  m_Name: SO_PatentOwnerRhiannon 1
   m_EditorClassIdentifier: 
   ownerName: Rhiannon Silverlight
   ownerSprite: {fileID: 8517273046572867635, guid: 75ea45aa3483c4977be61c789aa4d446, type: 3}
@@ -22,15 +22,5 @@ MonoBehaviour:
     isTruePatent: 1
   - patentName: Teleporting Chest
     patentDescription: A chest that can be summoned to the owner's location.
-    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
-    isTruePatent: 1
-  - patentName: Exorcist Bell
-    patentDescription: A special bell that drives away evil spirits. The larger the
-      bell, the more demons escape.
-    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
-    isTruePatent: 1
-  - patentName: Invisibility Potion
-    patentDescription: A potion that is claimed to make the body invisible to avoid
-      paying the poll tax.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 1

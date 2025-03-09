@@ -19,16 +19,3 @@ MonoBehaviour:
     patentDescription: A magical cloak that repels dirt and never needs washing.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 1
-  - patentName: Steam-Powered Horse
-    patentDescription: A mechanical horse running on steam, claimed to be faster
-      than real horses.
-    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
-    isTruePatent: 0
-  - patentName: Talking Fireplace
-    patentDescription: A fireplace that tells stories while keeping you warm.
-    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
-    isTruePatent: 1
-  - patentName: Automatic Potion Stirrer
-    patentDescription: A self-stirring stick that prevents potions from burning.
-    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
-    isTruePatent: 1

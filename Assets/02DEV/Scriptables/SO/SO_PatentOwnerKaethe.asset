@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f9545f33a317c4ef693ffa4832b13902, type: 3}
-  m_Name: SO_PatentOwnerAlex 4
+  m_Name: SO_PatentOwnerKaethe
   m_EditorClassIdentifier: 
   ownerName: Kaethe Wildflower
   ownerSprite: {fileID: 8517273046572867635, guid: 75ea45aa3483c4977be61c789aa4d446, type: 3}
@@ -18,18 +18,5 @@ MonoBehaviour:
   - patentName: Blood Transfusion Apparatus
     patentDescription: A device for transferring blood between individuals for medical
       purposes.
-    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
-    isTruePatent: 0
-  - patentName: Alchemy-Based Medicine
-    patentDescription: A potion that supposedly cures all diseases using alchemical
-      methods.
-    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
-    isTruePatent: 0
-  - patentName: Clockwork Brain
-    patentDescription: A mechanical brain that mimics human intelligence.
-    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
-    isTruePatent: 0
-  - patentName: Sunlight Amplifier
-    patentDescription: A device that can store and release sunlight for later use.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 0
