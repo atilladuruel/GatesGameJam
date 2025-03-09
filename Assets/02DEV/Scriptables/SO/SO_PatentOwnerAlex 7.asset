@@ -12,26 +12,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9545f33a317c4ef693ffa4832b13902, type: 3}
   m_Name: SO_PatentOwnerAlex 7
   m_EditorClassIdentifier: 
-  ownerName: 7
+  ownerName: Helga Goldengrove
   ownerSprite: {fileID: 8517273046572867635, guid: 75ea45aa3483c4977be61c789aa4d446, type: 3}
   patents:
-  - patentName: AAA BBB
-    patentDescription: "ydurma bilim projeleri haz\u0131rlayan bir laboratuvar y\xF6neticisi.
-      Ne kadar sa\xE7ma deney uydurabilirsen, o kadar para kazan\u0131rs\u0131n."
+  - patentName: Magic Quill
+    patentDescription: A self-writing quill that always makes its owner look wise.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 1
-  - patentName: 2. element test4
-    patentDescription: "ydurma bilim projeleri haz\u0131rlayan bir laboratuvar y\xF6neticisi.
-      Ne kadar sa\xE7ma deney uydurabilirsen, o kadar para kazan\u0131rs\u0131n."
+  - patentName: Ghost Talking Mirror
+    patentDescription: A mystical object that allows you to communicate with the
+      dead by looking in a mirror.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 1
-  - patentName: AAA BBB
-    patentDescription: "ydurma bilim qwer4projeleri haz\u0131rlayan bir laboratuvar
-      y\xF6neticisi. Ne kadar sa\xE7ma deney uydurabilirsen, o kadar para kazan\u0131rs\u0131n."
+  - patentName: Wheel of Fortune
+    patentDescription: A wooden wheel that can be turned and said to predict the
+      future.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 0
-  - patentName: 4. element
-    patentDescription: "ydurma bilim projeleri haz\u0131rlayan bir laboratuvar y\xF6neticisi.
-      Ne kadar sa\xE7ma deney uydurabilirsen, o kadar para kazan\u0131rs\u0131n."
+  - patentName: Moonlight Collection
+    patentDescription: Pure moonlight stored in bottles. When opened, a mystical
+      peace fills the room.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 1

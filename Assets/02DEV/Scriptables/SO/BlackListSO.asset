@@ -20,18 +20,40 @@ MonoBehaviour:
     - test3
     - test4
     blockedDescriptionWord:
-    - qwer1
-    - qwer2
-    - qwer3
-    - qwer4
+    - Engine
+    - Mechanism
+    - Aerodynamic
+    - Telescope
   - dayIndex: 1
     blockedNameWord:
-    - electric
-    - metal
-    - exp
-    - wheel
-    blockedDescriptionWord:
     - screw
     - dutch
     - larin
     - ezekiel
+    blockedDescriptionWord:
+    - Electrical
+    - Metal
+    - Exp
+    - Gear
+  - dayIndex: 2
+    blockedNameWord:
+    - 
+    - 
+    - 
+    - 
+    blockedDescriptionWord:
+    - Pulley
+    - Automation
+    - Flight
+    - Optics
+  - dayIndex: 3
+    blockedNameWord:
+    - 
+    - 
+    - 
+    - 
+    blockedDescriptionWord:
+    - Mathematic
+    - Chemistry
+    - Physic
+    - Logic

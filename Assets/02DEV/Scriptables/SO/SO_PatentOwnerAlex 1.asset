@@ -12,26 +12,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9545f33a317c4ef693ffa4832b13902, type: 3}
   m_Name: SO_PatentOwnerAlex 1
   m_EditorClassIdentifier: 
-  ownerName: 1
+  ownerName: Balian Stormrider
   ownerSprite: {fileID: 8517273046572867635, guid: 75ea45aa3483c4977be61c789aa4d446, type: 3}
   patents:
-  - patentName: 111 222
-    patentDescription: "ydurma bilim projeleri haz\u0131rlayan bir laboratuvar y\xF6neticisi.
-      Ne kadar sa\xE7ma deney uydurabilirsen, o kadar para kazan\u0131rs\u0131n."
+  - patentName: Endless Quill
+    patentDescription: A quill that never runs out of ink.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 1
-  - patentName: 2. element test2
-    patentDescription: "ydurma bilim projeleri haz\u0131rlayan bir laboratuvar y\xF6neticisi.
-      Ne kadar sa\xE7ma deney uydurabilirsen, o kadar para kazan\u0131rs\u0131n."
+  - patentName: Silent Alarm Bell
+    patentDescription: A bell that rings only in the mind of the intended listener.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 1
-  - patentName: 111 222
-    patentDescription: "ydurma bilim qwer3 projeleri haz\u0131rlayan bir laboratuvar
-      y\xF6neticisi. Ne kadar sa\xE7ma deney uydurabilirsen, o kadar para kazan\u0131rs\u0131n."
+  - patentName: Everlasting Candle
+    patentDescription: A candle that never burns out and provides eternal light.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 1
-  - patentName: 4. element
-    patentDescription: "ydurma bilim projeleri haz\u0131rlayan bir laboratuvar y\xF6neticisi.
-      Ne kadar sa\xE7ma deney uydurabilirsen, o kadar para kazan\u0131rs\u0131n."
+  - patentName: Lightning-Powered Torch
+    patentDescription: A torch that stores lightning energy and provides infinite
+      light.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 0

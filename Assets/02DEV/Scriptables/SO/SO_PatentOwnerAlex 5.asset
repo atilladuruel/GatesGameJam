@@ -12,26 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9545f33a317c4ef693ffa4832b13902, type: 3}
   m_Name: SO_PatentOwnerAlex 5
   m_EditorClassIdentifier: 
-  ownerName: 5
+  ownerName: Ursula Dawnbringer
   ownerSprite: {fileID: 8517273046572867635, guid: 75ea45aa3483c4977be61c789aa4d446, type: 3}
   patents:
-  - patentName: AAA BBB test1
-    patentDescription: "ydurma bilim projeleri haz\u0131rlayan bir laboratuvar y\xF6neticisi.
-      Ne kadar sa\xE7ma deney uydurabilirsen, o kadar para kazan\u0131rs\u0131n."
+  - patentName: Floating Lantern
+    patentDescription: A lantern that hovers in the air, following the owner.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 1
-  - patentName: 2. element test1
-    patentDescription: "ydurma bilim projeleri haz\u0131rlayan bir laboratuvar y\xF6neticisi.
-      Ne kadar sa\xE7ma deney uydurabilirsen, o kadar para kazan\u0131rs\u0131n."
+  - patentName: Steam-Driven Heart
+    patentDescription: A heart replacement powered by steam engines.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 0
-  - patentName: AAA BBB
-    patentDescription: "ydurma bilim qwer1 projeleri haz\u0131rlayan bir laboratuvar
-      y\xF6neticisi. Ne kadar sa\xE7ma deney uydurabilirsen, o kadar para kazan\u0131rs\u0131n."
+  - patentName: Compass of True Intent
+    patentDescription: A compass that points towards what the holder truly desires.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 1
-  - patentName: 4. element
-    patentDescription: "ydurma bilim projeleri haz\u0131rlayan bir laboratuvar y\xF6neticisi.
-      Ne kadar sa\xE7ma deney uydurabilirsen, o kadar para kazan\u0131rs\u0131n."
+  - patentName: Printing Press for Books
+    patentDescription: A machine that prints books automatically.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 0

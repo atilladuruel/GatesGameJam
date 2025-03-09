@@ -15,8 +15,23 @@ MonoBehaviour:
   ownerName: Leonardo Da Vinci
   ownerSprite: {fileID: 8517273046572867635, guid: 75ea45aa3483c4977be61c789aa4d446, type: 3}
   patents:
-  - patentName: AAA BBB
-    patentDescription: "ydurma bilim projeleri haz\u0131rlayan bir laboratuvar y\xF6neticisi.
-      Ne kadar sa\xE7ma deney uydurabilirsen, o kadar para kazan\u0131rs\u0131n."
+  - patentName: Self-Propelled Cart (Early Car Concept)
+    patentDescription: A wooden cart powered by a complex gear system, capable of
+      moving on its own.
+    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
+    isTruePatent: 0
+  - patentName: Ornithopter (Flying Machine with Wings)
+    patentDescription: A human-powered aircraft with bird-like wings designed to
+      enable flight.
+    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
+    isTruePatent: 0
+  - patentName: Anatomical Drawings for Medical Research
+    patentDescription: Detailed sketches of the human body, showing muscles, organs,
+      and bones for medical studies.
+    patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
+    isTruePatent: 0
+  - patentName: Helical Gear System for Transmitting Motion
+    patentDescription: A gear system designed to transfer rotational movement smoothly
+      and efficiently.
     patentSprite: {fileID: -7710123661379788314, guid: b510cfb3883fe49dd97bb6515f18de0a, type: 3}
     isTruePatent: 0
