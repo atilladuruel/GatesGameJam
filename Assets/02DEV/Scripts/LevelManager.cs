@@ -9,6 +9,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private CharacterMovement characterMovement;
     [SerializeField] private List<string> blockedWords;
 
+    [SerializeField] private Animator scrollAnimator;
     GameManager gameManager;
 
     [SerializeField] GameObject nexCustomerButton;
@@ -127,10 +128,14 @@ public class LevelManager : MonoBehaviour
     }
 
     bool isFirstTime = false;
+    private static readonly int Open = Animator.StringToHash("Open");
+    private static readonly int Close = Animator.StringToHash("Close");
+
     public void NextPatent()
     {
 
         //nexCustomerButton.SetActive(false);
+        scrollAnimator.SetTrigger(Open);
 
         if (!isFirstTime)
         {
@@ -143,6 +148,7 @@ public class LevelManager : MonoBehaviour
                 characterMovement.WalkRight();
                 GetOwnerPatent();
                 isFirstTime = true;
+                scrollAnimator.SetTrigger(Close);
             }
         }
         NextPatentOwner();
