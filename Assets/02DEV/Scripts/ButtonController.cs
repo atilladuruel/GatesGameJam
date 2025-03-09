@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class ButtonController : MonoBehaviour
 {
 
-    [SerializeField ]Image image;
+    [SerializeField ]GameObject image;
 
     [SerializeField] Animator _anim;
 

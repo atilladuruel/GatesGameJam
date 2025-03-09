@@ -19,6 +19,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] GameObject nexCustomerButton;
     [SerializeField] GameObject gameEndMenu;
 
+    [SerializeField] GameObject first;
+    [SerializeField] GameObject second;
+
     private void Start()
     {
         gameManager = GetComponent<GameManager>();
@@ -70,7 +73,8 @@ public class LevelManager : MonoBehaviour
 
     void ClearData()
     {
-
+        first.SetActive(false);
+        second.SetActive(false);
         // UIElements.ownerImage.sprite = null;
         characterMovement.WalkLeft();
         scrollAnimator.SetTrigger(Close);
@@ -107,18 +111,21 @@ public class LevelManager : MonoBehaviour
             rejectButton.SetTrigger("isSelect");
 
 
-        DOVirtual.DelayedCall(2f, () =>
-        {
+        
+          
             var patent = patentOwners[0].patents[0];
 
-            ClearData();
+           // 
 
             if (patent.isTruePatent != isTrue)
             {
                 wrongCount++;
                 Debug.Log("failllsss");
+                DOVirtual.DelayedCall(2f, () => {
+                ClearData();
                 OpenCustomerButton();
-                return;
+            });
+            return;
             }
 
             foreach (var item in blockedWords)
@@ -138,14 +145,20 @@ public class LevelManager : MonoBehaviour
             }
             trueCount++;
             isWordControl = false;
+
+        DOVirtual.DelayedCall(2f, () => {
+            ClearData();
             OpenCustomerButton();
         });
+           
+        
 
         
     }
 
     private void OpenCustomerButton()
     {
+        
         nexCustomerButton.SetActive(true);
     }
 
@@ -155,12 +168,16 @@ public class LevelManager : MonoBehaviour
 
     public void NextPatent()
     {
-            nexCustomerButton.SetActive(false);
-            UIElements.ownerImage.sprite = patentOwners[0].ownerSprite;
+        
+
+        nexCustomerButton.SetActive(false);      
+
+             UIElements.ownerImage.sprite = patentOwners[0].ownerSprite;
+        
             characterMovement.WalkLeft(OnComplete);
             scrollAnimator.SetTrigger(Open);
-        
-        if (!isFirstTime)
+
+            if (!isFirstTime)
             {
                 GetOwnerPatent();
                 return;
@@ -171,10 +188,10 @@ public class LevelManager : MonoBehaviour
             {
                 characterMovement.WalkRight();
                 isFirstTime = true;
-               
-            }
-        NextPatentOwner();
 
+            }
+            NextPatentOwner();
+        
       
     }
 
