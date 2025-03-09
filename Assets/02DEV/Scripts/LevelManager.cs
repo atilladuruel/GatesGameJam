@@ -6,7 +6,7 @@ public class LevelManager : MonoBehaviour
 {
     [SerializeField] private List<PatentOwnerSO> patentOwners;
     [SerializeField] private UIItems UIElements;
-
+    [SerializeField] private CharacterMovement characterMovement;
     [SerializeField] private List<string> blockedWords;
 
     GameManager gameManager;
@@ -130,14 +130,20 @@ public class LevelManager : MonoBehaviour
     public void NextPatent()
     {
 
-        nexCustomerButton.SetActive(false);
+        //nexCustomerButton.SetActive(false);
 
         if (!isFirstTime)
         {
-            GetOwnerPatent();
-            isFirstTime = true;
+            characterMovement.WalkLeft(OnComplete);
 
             return;
+
+            void OnComplete()
+            {
+                characterMovement.WalkRight();
+                GetOwnerPatent();
+                isFirstTime = true;
+            }
         }
         NextPatentOwner();
     }

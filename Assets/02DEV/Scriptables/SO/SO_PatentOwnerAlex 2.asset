@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SO_PatentOwnerAlex 2
   m_EditorClassIdentifier: 
   ownerName: Fenrir Frostbane
-  ownerSprite: {fileID: 8517273046572867635, guid: 75ea45aa3483c4977be61c789aa4d446, type: 3}
+  ownerSprite: {fileID: -1472498995922668587, guid: a921c05e57b5c4a2b95e388508aa2cc0, type: 3}
   patents:
   - patentName: Invisible Ink Lock
     patentDescription: A book that can only be opened when the correct invisible
