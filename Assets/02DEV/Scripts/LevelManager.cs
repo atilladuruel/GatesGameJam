@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class LevelManager : MonoBehaviour
 {
@@ -18,6 +19,7 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         gameManager = GetComponent<GameManager>();
+       
     }
 
     public void LoadDayDataTtest(List<PatentOwnerSO> newDayData, string dayIndex)
@@ -66,7 +68,9 @@ public class LevelManager : MonoBehaviour
     void ClearData()
     {
 
-        UIElements.ownerImage.sprite = null;
+        // UIElements.ownerImage.sprite = null;
+        characterMovement.WalkLeft();
+        scrollAnimator.SetTrigger(Close);
         UIElements.ownerName.text = "";
 
         UIElements.patentImage.sprite = null;
@@ -93,7 +97,9 @@ public class LevelManager : MonoBehaviour
     public void ControlPatent(bool isTrue)
     {
         var patent = patentOwners[0].patents[0];
+
         ClearData();
+
         if (patent.isTruePatent != isTrue)
         {
             wrongCount++;
@@ -134,23 +140,35 @@ public class LevelManager : MonoBehaviour
     public void NextPatent()
     {
 
-        //nexCustomerButton.SetActive(false);
-        scrollAnimator.SetTrigger(Open);
+        nexCustomerButton.SetActive(false);
+        UIElements.ownerImage.sprite = patentOwners[0].ownerSprite;
+        characterMovement.WalkLeft(OnComplete);
 
         if (!isFirstTime)
         {
-            characterMovement.WalkLeft(OnComplete);
+            DOVirtual.DelayedCall(2, () =>
+            { 
+               
+                GetOwnerPatent();
+            });
 
             return;
 
-            void OnComplete()
-            {
-                characterMovement.WalkRight();
-                GetOwnerPatent();
-                isFirstTime = true;
-                scrollAnimator.SetTrigger(Close);
-            }
         }
+        void OnComplete()
+        {
+
+            characterMovement.WalkRight();
+
+            isFirstTime = true;
+            //scrollAnimator.SetTrigger(Close);
+
+            DOVirtual.DelayedCall(2, () =>
+            {
+                scrollAnimator.SetTrigger(Open);     
+            });
+        }
+
         NextPatentOwner();
     }
 
