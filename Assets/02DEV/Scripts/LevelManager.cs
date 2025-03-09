@@ -11,6 +11,9 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private List<string> blockedWords;
 
     [SerializeField] private Animator scrollAnimator;
+
+    [SerializeField] private Animator approveButton;
+    [SerializeField] private Animator rejectButton;
     GameManager gameManager;
 
     [SerializeField] GameObject nexCustomerButton;
@@ -83,10 +86,8 @@ public class LevelManager : MonoBehaviour
         if (patentOwners.Count == 0)
         {
             CalculateGameEnd();
-            //gameManager.NextDay();
             return;
         }
-
        
         GetOwnerPatent();
     }
@@ -94,38 +95,53 @@ public class LevelManager : MonoBehaviour
     bool isWordControl = false;
 
     int wrongCount,trueCount;
+
     public void ControlPatent(bool isTrue)
     {
-        var patent = patentOwners[0].patents[0];
 
-        ClearData();
-
-        if (patent.isTruePatent != isTrue)
+        if (isTrue)
         {
-            wrongCount++;
-            Debug.Log("failllsss");
-            OpenCustomerButton();
-            return;
+            approveButton.SetTrigger("isSelect");
         }
+        else
+            rejectButton.SetTrigger("isSelect");
 
-        foreach (var item in blockedWords)
+
+        DOVirtual.DelayedCall(2f, () =>
         {
-            if (patent.patentName.Contains(item) || patent.patentDescription.Contains(item))
+            var patent = patentOwners[0].patents[0];
+
+            ClearData();
+
+            if (patent.isTruePatent != isTrue)
             {
                 wrongCount++;
-                Debug.Log("failllsss " + item + " Found");
-                isWordControl = true;
-                break;
+                Debug.Log("failllsss");
+                OpenCustomerButton();
+                return;
             }
-        }
 
-        if (!isWordControl)
-        {
-            Debug.Log("Congratz");
-        }
-        trueCount++;
-        isWordControl = false;
-        OpenCustomerButton();
+            foreach (var item in blockedWords)
+            {
+                if (patent.patentName.Contains(item) || patent.patentDescription.Contains(item))
+                {
+                    wrongCount++;
+                    Debug.Log("failllsss " + item + " Found");
+                    isWordControl = true;
+                    break;
+                }
+            }
+
+            if (!isWordControl)
+            {
+                Debug.Log("Congratz");
+            }
+            trueCount++;
+            isWordControl = false;
+            OpenCustomerButton();
+        });
+
+        
     }
 
     private void OpenCustomerButton()
@@ -139,44 +155,42 @@ public class LevelManager : MonoBehaviour
 
     public void NextPatent()
     {
-
-        nexCustomerButton.SetActive(false);
-        UIElements.ownerImage.sprite = patentOwners[0].ownerSprite;
-        characterMovement.WalkLeft(OnComplete);
-
+            nexCustomerButton.SetActive(false);
+            UIElements.ownerImage.sprite = patentOwners[0].ownerSprite;
+            characterMovement.WalkLeft(OnComplete);
+            scrollAnimator.SetTrigger(Open);
+        
         if (!isFirstTime)
-        {
-            DOVirtual.DelayedCall(2, () =>
-            { 
-               
-                GetOwnerPatent();
-            });
-
-            return;
-
-        }
-        void OnComplete()
-        {
-
-            characterMovement.WalkRight();
-
-            isFirstTime = true;
-            //scrollAnimator.SetTrigger(Close);
-
-            DOVirtual.DelayedCall(2, () =>
             {
-                scrollAnimator.SetTrigger(Open);     
-            });
-        }
+                GetOwnerPatent();
+                return;
 
+            }
+
+            void OnComplete()
+            {
+                characterMovement.WalkRight();
+                isFirstTime = true;
+               
+            }
         NextPatentOwner();
+
+      
     }
+
 
     void CalculateGameEnd()
     {
         PlayerPrefs.SetInt("WrongCount", wrongCount);
         PlayerPrefs.SetInt("TrueCount",trueCount);
         gameEndMenu.SetActive(true);
+    }
+
+    public void NextDay()
+    {
+        ClearData();
+        gameManager.NextDay();
+        gameEndMenu.SetActive(false);
     }
 
 }
